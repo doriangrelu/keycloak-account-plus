@@ -1,0 +1,30 @@
+<div class="mb-8 text-center w-full">
+  <h1 class="font-bold text-xl uppercase">Accès à mon compte</h1>
+</div>
+
+<div class="flex flex-col gap-4">
+  <mat-accordion>
+
+    @for (session of access; track session.id) {
+      <mat-expansion-panel hideToggle>
+        <mat-expansion-panel-header>
+          <mat-panel-title><span class="font-bold">Adresse IP session: </span> <span
+            class="italic">{{ session.ip }} </span></mat-panel-title>
+          <mat-panel-description><span
+            class="font-bold">Date d'ouverture:</span>&nbsp; <span
+            class="italic">{{ session.startedAt | date: 'dd/MM/yyyy HH:mm' }}</span>
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <mat-list>
+          <mat-list-item><span class="font-bold">Client</span>: {{ session.client }}</mat-list-item>
+          <mat-list-item><span
+            class="font-bold">Dernier accès</span>: {{ session.lastSeenAt | date: 'dd/MM/yyyy HH:mm' }}
+          </mat-list-item>
+          <mat-list-item><span
+            class="font-bold">Date expiration</span>: {{ session.expiredAt | date: 'dd/MM/yyyy HH:mm' }}
+          </mat-list-item>
+        </mat-list>
+      </mat-expansion-panel>
+    }
+  </mat-accordion>
+</div>

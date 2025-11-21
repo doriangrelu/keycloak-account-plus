@@ -1,0 +1,55 @@
+<div class="mb-8 text-center w-full">
+  <h1 class="font-bold text-xl uppercase">Mes informations</h1>
+</div>
+
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+  <div class="p-8">
+    <div class="w-full flex justify-center flex-col gap-4">
+      <div class="w-full flex justify-center">
+        <img ngSrc="https://avatar.iran.liara.run/public" alt="Photo de profil" width="128" height="128" priority="1">
+      </div>
+      <div class="w-full text-center">
+        <p class="font-bold text-sm">doriangrelu839@gmail.com</p>
+      </div>
+      <div class="w-full flex justify-center">
+        <button class="w-full" matButton="elevated" (click)="changeProfilPicture()">
+          Modifier photo de profil
+          <mat-icon fontIcon="add"></mat-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="p-8">
+    <form action="" class="flex flex-col" [formGroup]="form">
+      <mat-form-field>
+        <mat-label>Prénom</mat-label>
+        <input formControlName="firstname" matInput/>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Nom</mat-label>
+        <input formControlName="lastname" matInput/>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input formControlName="email" matInput/>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Téléphone</mat-label>
+        <input formControlName="phone" matInput/>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Date d'anniversaire</mat-label>
+        <input formControlName="birthday" matInput [matDatepicker]="picker">
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+      <button class="mt-8" matButton="filled">
+        Soumettre
+        <mat-icon fontIcon="send"></mat-icon>
+      </button>
+    </form>
+  </div>
+</div>
+

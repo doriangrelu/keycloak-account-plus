@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  @apply bg-gray-200;
+}
+
+
+.mat-bg-primary {
+  background-color: var(--mat-sys-primary);
+}
+
+.mat-bg-secondary {
+  background-color: var(--mat-sys-secondary);
+}
+
+.mat-bg-error {
+  background-color: var(--mat-sys-error);
+}
+
+.mat-bg-surface {
+  background-color: var(--mat-sys-surface);
+}
+
+.mat-bg-disabled {
+  background-color: color-mix(in srgb, var(--mat-sys-on-surface) 12%, transparent);
+}
+
+.mat-text-primary {
+  color: var(--mat-sys-primary);
+}
+
+.mat-text-secondary {
+  color: var(--mat-sys-secondary);
+}
+
+.mat-text-error {
+  color: var(--mat-sys-error);
+}
+
+.mat-text-disabled {
+  color: color-mix(in srgb, var(--mat-sys-on-surface) 38%, transparent);
+}
+
+.mat-text-on-primary {
+  color: var(--mat-sys-on-primary);
+}
+
+.mat-text-on-primary-container {
+  color: var(--mat-sys-on-primary-container);
+}
+
+.mat-text-on-error {
+  color: var(--mat-sys-on-error);
+}
+
+.mat-text-on-error-container {
+  color: var(--mat-sys-on-error-container);
+}
+
+.mat-text-on-surface {
+  color: var(--mat-sys-on-surface);
+}
+
+.mat-font-body-sm {
+  font: var(--mat-sys-body-small);
+  letter-spacing: var(--mat-sys-body-small-tracking);
+}

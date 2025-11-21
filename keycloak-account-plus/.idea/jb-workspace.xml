@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WorkspaceSettings">
+    <project name="keycloak-account-plus-webapp" path="$PROJECT_DIR$/../keycloak-account-plus-webapp" />
+    <option name="workspace" value="true" />
+  </component>
+</project>

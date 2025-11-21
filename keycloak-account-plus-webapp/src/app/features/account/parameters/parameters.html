@@ -1,0 +1,32 @@
+<div class="mb-8 text-center w-full">
+  <h1 class="font-bold text-xl uppercase">Paramètres</h1>
+</div>
+
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+  <div class="p-8">
+    <h2 class="font-bold text-sm uppercase underline mb-4">Modification du mot de passe:</h2>
+    <form action="" class="flex flex-col" [formGroup]="form">
+      <mat-form-field>
+        <mat-label>Mot de passe</mat-label>
+        <input formControlName="password" type="password" matInput/>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Confirmation mot de passe</mat-label>
+        <input formControlName="confirmPassword" type="password" matInput/>
+      </mat-form-field>
+
+      <button class="mt-8" matButton="filled">
+        Soumettre
+        <mat-icon fontIcon="send"></mat-icon>
+      </button>
+    </form>
+  </div>
+
+  <div class="p-8">
+    <div class="w-full flex justify-center flex-col gap-4">
+      <p>Gestion 2FA</p>
+    </div>
+  </div>
+</div>
+

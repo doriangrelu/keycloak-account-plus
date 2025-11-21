@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a2379237-05ae-4329-9d7c-8033a8d90260" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../keycloak-account-plus-webapp/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/../keycloak-account-plus-webapp/angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../keycloak-account-plus-webapp/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../keycloak-account-plus-webapp/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../keycloak-account-plus-webapp/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../keycloak-account-plus-webapp/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../keycloak-account-plus-webapp/src/app/app.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../keycloak-account-plus-webapp/src/app/app.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../keycloak-account-plus-webapp/src/app/app.html" beforeDir="false" afterPath="$PROJECT_DIR$/../keycloak-account-plus-webapp/src/app/app.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../keycloak-account-plus-webapp/src/app/app.routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../keycloak-account-plus-webapp/src/app/app.routes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../keycloak-account-plus-webapp/src/app/app.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../keycloak-account-plus-webapp/src/app/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../keycloak-account-plus-webapp/src/app/app.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../keycloak-account-plus-webapp/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../keycloak-account-plus-webapp/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../keycloak-account-plus-webapp/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/../keycloak-account-plus-webapp/src/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../keycloak-account-plus-webapp/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/../keycloak-account-plus-webapp/tsconfig.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <branch-grouping>
+      <option value="directory" />
+      <option value="repository" />
+    </branch-grouping>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../keycloak-account-plus-webapp" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="C:\DEV\tools\php-8.3.12-nts-Win32-vs16-x64\php.exe" />
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 5
+}]]></component>
+  <component name="ProjectId" id="35nD0hRtkBekUO2VpQGCSPdu1RJ" />
+  <component name="ProjectViewState">
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="openDirectoriesWithSingleClick" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.Workspaces.CheckRemotesActivity": "true",
+    "RunOnceActivity.restore.workspace.module": "true",
+    "RunOnceActivity.workspace.git.set.grouping.by.repo": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/DEV/repositories/keycloak-account-plus/keycloak-account-plus-webapp/public",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "C:\\DEV\\repositories\\keycloak-account-plus\\keycloak-account-plus-webapp\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\DEV\repositories\keycloak-account-plus\keycloak-account-plus-webapp\public" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.28238.7" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a2379237-05ae-4329-9d7c-8033a8d90260" name="Changes" comment="" />
+      <created>1763736723063</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1763736723063</updated>
+      <workItem from="1763736726154" duration="9256000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

@@ -5,17 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a2379237-05ae-4329-9d7c-8033a8d90260" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../keycloak-account-plus-webapp/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/../keycloak-account-plus-webapp/angular.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../keycloak-account-plus-webapp/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../keycloak-account-plus-webapp/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../keycloak-account-plus-webapp/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../keycloak-account-plus-webapp/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../keycloak-account-plus-webapp/src/app/app.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../keycloak-account-plus-webapp/src/app/app.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../keycloak-account-plus-webapp/src/app/app.html" beforeDir="false" afterPath="$PROJECT_DIR$/../keycloak-account-plus-webapp/src/app/app.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../keycloak-account-plus-webapp/src/app/app.routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../keycloak-account-plus-webapp/src/app/app.routes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../keycloak-account-plus-webapp/src/app/app.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../keycloak-account-plus-webapp/src/app/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../keycloak-account-plus-webapp/src/app/app.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../keycloak-account-plus-webapp/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../keycloak-account-plus-webapp/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../keycloak-account-plus-webapp/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/../keycloak-account-plus-webapp/src/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../keycloak-account-plus-webapp/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/../keycloak-account-plus-webapp/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LICENCE.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +20,7 @@
       <option value="directory" />
       <option value="repository" />
     </branch-grouping>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../keycloak-account-plus-webapp" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="C:\DEV\tools\php-8.3.12-nts-Win32-vs16-x64\php.exe" />
   <component name="ProjectColorInfo"><![CDATA[{
@@ -83,7 +73,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1763736723063</updated>
-      <workItem from="1763736726154" duration="9256000" />
+      <workItem from="1763736726154" duration="9572000" />
     </task>
     <servers />
   </component>

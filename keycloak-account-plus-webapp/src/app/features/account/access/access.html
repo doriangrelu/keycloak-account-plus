@@ -2,29 +2,66 @@
   <h1 class="font-bold text-xl uppercase">Accès à mon compte</h1>
 </div>
 
-<div class="flex flex-col gap-4">
-  <mat-accordion>
-
-    @for (session of access; track session.id) {
-      <mat-expansion-panel hideToggle>
-        <mat-expansion-panel-header>
-          <mat-panel-title><span class="font-bold">Adresse IP session: </span> <span
-            class="italic">{{ session.ip }} </span></mat-panel-title>
-          <mat-panel-description><span
-            class="font-bold">Date d'ouverture:</span>&nbsp; <span
-            class="italic">{{ session.startedAt | date: 'dd/MM/yyyy HH:mm' }}</span>
-          </mat-panel-description>
-        </mat-expansion-panel-header>
-        <mat-list>
-          <mat-list-item><span class="font-bold">Client</span>: {{ session.client }}</mat-list-item>
-          <mat-list-item><span
-            class="font-bold">Dernier accès</span>: {{ session.lastSeenAt | date: 'dd/MM/yyyy HH:mm' }}
-          </mat-list-item>
-          <mat-list-item><span
-            class="font-bold">Date expiration</span>: {{ session.expiredAt | date: 'dd/MM/yyyy HH:mm' }}
-          </mat-list-item>
-        </mat-list>
-      </mat-expansion-panel>
+@if (loading()) {
+  <div class="flex justify-center items-center h-64">
+    <mat-spinner diameter="48"></mat-spinner>
+  </div>
+} @else {
+  <div class="flex flex-col gap-4">
+    @if (sessions().length > 1) {
+      <div class="flex justify-end mb-4">
+        <button matButton="outlined" (click)="logoutAllSessions()">
+          <mat-icon fontIcon="logout"></mat-icon>
+          Déconnecter toutes les autres sessions
+        </button>
+      </div>
     }
-  </mat-accordion>
-</div>
+
+    @if (sessions().length === 0) {
+      <div class="text-center text-gray-500 py-8">
+        Aucune session active
+      </div>
+    } @else {
+      <mat-accordion>
+        @for (session of sessions(); track session.id) {
+          <mat-expansion-panel hideToggle>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <span class="font-bold">Adresse IP: </span>
+                <span class="italic ml-1">{{ session.ipAddress }}</span>
+                @if (session.current) {
+                  <mat-chip class="ml-2" color="primary">Session actuelle</mat-chip>
+                }
+              </mat-panel-title>
+              <mat-panel-description>
+                <span class="font-bold">Connexion:</span>&nbsp;
+                <span class="italic">{{ session.startedAt | date: 'dd/MM/yyyy HH:mm' }}</span>
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+            <mat-list>
+              <mat-list-item>
+                <span class="font-bold">Applications</span>: {{ session.clients.join(', ') || 'Aucune' }}
+              </mat-list-item>
+              <mat-list-item>
+                <span class="font-bold">Dernier accès</span>: {{ session.lastAccessAt | date: 'dd/MM/yyyy HH:mm' }}
+              </mat-list-item>
+              @if (session.userAgent) {
+                <mat-list-item>
+                  <span class="font-bold">Navigateur</span>: {{ session.userAgent }}
+                </mat-list-item>
+              }
+            </mat-list>
+            @if (!session.current) {
+              <div class="flex justify-end p-4">
+                <button matButton="outlined" (click)="logoutSession(session.id)">
+                  <mat-icon fontIcon="logout"></mat-icon>
+                  Déconnecter cette session
+                </button>
+              </div>
+            }
+          </mat-expansion-panel>
+        }
+      </mat-accordion>
+    }
+  </div>
+}

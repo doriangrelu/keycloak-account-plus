@@ -1,0 +1,24 @@
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        opaquetoken:
+          introspection-uri: http://localhost:8080/realms/keycloak-account-plus/protocol/openid-connect/token/introspect
+          client-id: account-bff
+          client-secret: bff-secret-change-in-production
+
+keycloak:
+  url: http://localhost:8080
+  realm: keycloak-account-plus
+  admin:
+    client-id: account-bff
+    client-secret: bff-secret-change-in-production
+
+cors:
+  allowed-origins: http://localhost:4200
+
+logging:
+  level:
+    com.keycloakaccountplus: DEBUG
+    org.springframework.security: DEBUG
+    org.keycloak: DEBUG

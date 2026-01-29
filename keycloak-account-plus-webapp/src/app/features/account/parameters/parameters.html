@@ -2,31 +2,82 @@
   <h1 class="font-bold text-xl uppercase">Paramètres</h1>
 </div>
 
-
 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
   <div class="p-8">
     <h2 class="font-bold text-sm uppercase underline mb-4">Modification du mot de passe:</h2>
-    <form action="" class="flex flex-col" [formGroup]="form">
+    <form class="flex flex-col" [formGroup]="form" (ngSubmit)="changePassword()">
       <mat-form-field>
-        <mat-label>Mot de passe</mat-label>
-        <input formControlName="password" type="password" matInput/>
+        <mat-label>Mot de passe actuel</mat-label>
+        <input formControlName="currentPassword" type="password" matInput/>
+        @if (form.get('currentPassword')?.hasError('required') && form.get('currentPassword')?.touched) {
+          <mat-error>Le mot de passe actuel est requis</mat-error>
+        }
       </mat-form-field>
       <mat-form-field>
-        <mat-label>Confirmation mot de passe</mat-label>
+        <mat-label>Nouveau mot de passe</mat-label>
+        <input formControlName="newPassword" type="password" matInput/>
+        @if (form.get('newPassword')?.hasError('required') && form.get('newPassword')?.touched) {
+          <mat-error>Le nouveau mot de passe est requis</mat-error>
+        }
+        @if (form.get('newPassword')?.hasError('minlength') && form.get('newPassword')?.touched) {
+          <mat-error>Le mot de passe doit contenir au moins 8 caractères</mat-error>
+        }
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Confirmation du nouveau mot de passe</mat-label>
         <input formControlName="confirmPassword" type="password" matInput/>
+        @if (form.get('confirmPassword')?.hasError('required') && form.get('confirmPassword')?.touched) {
+          <mat-error>La confirmation est requise</mat-error>
+        }
       </mat-form-field>
 
-      <button class="mt-8" matButton="filled">
-        Soumettre
-        <mat-icon fontIcon="send"></mat-icon>
+      <button class="mt-8" matButton="filled" type="submit" [disabled]="saving() || form.invalid">
+        @if (saving()) {
+          Modification en cours...
+        } @else {
+          Modifier le mot de passe
+          <mat-icon fontIcon="lock"></mat-icon>
+        }
       </button>
     </form>
   </div>
 
   <div class="p-8">
-    <div class="w-full flex justify-center flex-col gap-4">
-      <p>Gestion 2FA</p>
-    </div>
+    <h2 class="font-bold text-sm uppercase underline mb-4">Authentification à deux facteurs (2FA):</h2>
+
+    @if (loadingCredentials()) {
+      <div class="flex justify-center items-center h-32">
+        <mat-spinner diameter="32"></mat-spinner>
+      </div>
+    } @else {
+      @if (getTotpCredentials().length === 0) {
+        <div class="text-gray-500 mb-4">
+          <p>Aucune méthode 2FA configurée.</p>
+          <p class="text-sm mt-2">Pour configurer l'authentification à deux facteurs, veuillez vous rendre sur la console Keycloak.</p>
+        </div>
+      } @else {
+        <mat-list>
+          @for (credential of getTotpCredentials(); track credential.id) {
+            <mat-list-item>
+              <div class="flex justify-between items-center w-full">
+                <div>
+                  <span class="font-bold">{{ credential.userLabel || 'TOTP' }}</span>
+                  @if (credential.createdAt) {
+                    <span class="text-sm text-gray-500 ml-2">
+                      Créé le {{ credential.createdAt | date: 'dd/MM/yyyy' }}
+                    </span>
+                  }
+                </div>
+                <button matButton="outlined" (click)="removeTotp(credential.id)">
+                  <mat-icon fontIcon="delete"></mat-icon>
+                  Supprimer
+                </button>
+              </div>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+          }
+        </mat-list>
+      }
+    }
   </div>
 </div>
-

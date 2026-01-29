@@ -1,8 +1,9 @@
-import {Routes} from '@angular/router';
-import {Infos} from '@features/account/infos/infos';
-import {Account} from '@features/account/account';
-import {Access} from '@features/account/access/access';
-import {Parameters} from '@features/account/parameters/parameters';
+import { Routes } from '@angular/router';
+import { authGuard } from './core/auth/auth.guard';
+import { Infos } from '@features/account/infos/infos';
+import { Account } from '@features/account/account';
+import { Access } from '@features/account/access/access';
+import { Parameters } from '@features/account/parameters/parameters';
 
 export const routes: Routes = [
   {
@@ -13,6 +14,7 @@ export const routes: Routes = [
   {
     path: 'account',
     component: Account,
+    canActivate: [authGuard],
     children: [
       {
         path: 'infos',
